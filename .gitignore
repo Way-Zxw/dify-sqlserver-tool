@@ -28,6 +28,8 @@ env/
 # Environment files
 .env
 !.env.example
+!tests/.env.test
+!.env.test
 
 # IDE
 .idea/
