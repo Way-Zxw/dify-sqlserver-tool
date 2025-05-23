@@ -1,9 +1,15 @@
 from typing import Any, Dict, List
 from .sql_server_tool import SQLServerTool
+import os
+import json
 
 class DifySQLServerTool:
     def __init__(self):
         self.db_tool = None
+        # 加载 manifest.json
+        manifest_path = os.path.join(os.path.dirname(__file__), 'manifest.json')
+        with open(manifest_path, 'r') as f:
+            self.manifest = json.load(f)
 
     @staticmethod
     def get_tool_definition() -> Dict[str, Any]:
@@ -12,6 +18,7 @@ class DifySQLServerTool:
             "name": "sql_server",
             "label": "SQL Server Database",
             "description": "执行 SQL Server 数据库操作的工具",
+            "type": "external_tool",
             "parameters": {
                 "type": "object",
                 "required": ["operation", "query"],

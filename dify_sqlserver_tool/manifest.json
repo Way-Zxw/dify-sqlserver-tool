@@ -1,0 +1,13 @@
+{
+    "name": "sql_server",
+    "version": "0.1.2",
+    "description": "SQL Server database tool for Dify",
+    "author": "Way-Zxw",
+    "email": "your.email@example.com",
+    "url": "https://github.com/Way-Zxw/dify-sqlserver-tool",
+    "entry_point": "dify_sqlserver_tool.tool:DifySQLServerTool",
+    "requirements": [
+        "pyodbc>=4.0.39",
+        "python-dotenv>=1.0.0"
+    ]
+} 
