@@ -19,6 +19,7 @@ class DifySQLServerTool:
             "label": "SQL Server Database",
             "description": "执行 SQL Server 数据库操作的工具",
             "type": "external_tool",
+            "api_version": "v1",
             "parameters": {
                 "type": "object",
                 "required": ["operation", "query"],
