@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="dify-sqlserver-tool",
-    version="0.1.0",
+    version="0.1.1",
     packages=find_packages(),
     install_requires=[
         "pyodbc>=4.0.39",
@@ -21,7 +21,7 @@ setup(
     ],
     python_requires=">=3.7",
     entry_points={
-        "dify_tools": [
+        "dify.plugins": [
             "sql_server=dify_sqlserver_tool.tool:DifySQLServerTool"
         ]
     }

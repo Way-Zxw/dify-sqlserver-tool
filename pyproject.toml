@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dify-sqlserver-tool"
-version = "0.1.0"
+version = "0.1.1"
 description = "A SQL Server tool for Dify"
 readme = "README.md"
 authors = [{ name = "Way-Zxw", email = "your.email@example.com" }]
@@ -17,4 +17,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/Way-Zxw/dify-sqlserver-tool"
-Repository = "https://github.com/Way-Zxw/dify-sqlserver-tool.git" 
+Repository = "https://github.com/Way-Zxw/dify-sqlserver-tool.git"
+
+[project.entry-points."dify.plugins"]
+sql_server = "dify_sqlserver_tool.tool:DifySQLServerTool" 
